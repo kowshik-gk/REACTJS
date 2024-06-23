@@ -86,16 +86,19 @@ body {
   
   .todo-container {
     background-color: #fff;
-    color: #000;
+    color: hsl(0, 14%, 99%);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #000; /* Black border for todo-container */
     padding: 20px;
     top: 17%;
-    width: 46%;
-    margin: 0;
+    width: 60%;
+    min-width: 52%;
+    margin: 7%;
+    padding: 2%;
+    margin-left: 30%;
     position: absolute;
-    left: 30%;
+    left: 50%;
 }
 
   .coordinates {

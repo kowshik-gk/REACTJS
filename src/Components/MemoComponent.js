@@ -11,5 +11,5 @@ function MemoComponent(props){
     )
 }
 
-//avoid unwanted rerendring
+//avoid unwanted rerendring if props not updated
 export default React.memo(MemoComponent);

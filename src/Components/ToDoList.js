@@ -43,18 +43,18 @@ function ToDoList() {
   };
 
   const handleUpdateItem = () => {
-    setItems(items.map(item => 
+    setItems(items.map(item =>
       item.id === currentId ? { ...item, Topic: newItem.Topic, Content: newItem.Content } : item
     ));
-      setNewItem({ Topic: '', Content: '' });
+    setNewItem({ Topic: '', Content: '' });
     setIsUpdate(false);
     setCurrentId(null);
     togglePopup();
   };
 
   const handleEditItem = (id) => {
-   // const itemToEdit = items.find(item => item.id === id);
-   // setNewItem({ Topic: itemToEdit.Topic, Content: itemToEdit.Content });
+    const itemToEdit = items.find(item => item.id === id);
+    setNewItem({ Topic: itemToEdit.Topic, Content: itemToEdit.Content });
     setCurrentId(id);
     setIsUpdate(true);
     togglePopup();
@@ -64,28 +64,40 @@ function ToDoList() {
     setItems(items.filter(item => item.id !== id));
   };
 
+  const handleAddButtonClick = () => {
+    setNewItem({ Topic: '', Content: '' });
+    setIsUpdate(false);
+    togglePopup();
+  };
+
+  const handleSpace=()=>{
+    space+=300;
+  }
+
+  const space=50;
   return (
+    
     <>
       <header>ToDoList</header>
+      
       <div className={showPopup ? 'blur' : ''}>
-        <div className="todo-container">
-          <ul className="todo-list">
+        <div className='sub1'>
             {items.map(item => (
-              <li key={item.id} className="todo-item">
-                <div className="todo-item-content">
+              <div className='sub2' key={item.id}> 
+                <div>
                   <h2>{item.Topic}</h2>
                   <p>{item.Content}</p>
                 </div>
                 <div className="icons">
                   <MdDelete onClick={() => handleDeleteItem(item.id)} className="icon" />
-                  <MdEdit onClick={() => handleEditItem(item.id)} className="icon" />
+                  <MdEdit onClick={() => handleEditItem(item.id)} onLoad={()=> handleSpace()} className="icon" />
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-        <button id="RoundButton" onClick={togglePopup}><b>Add</b></button>
-      </div>
+        <button id="RoundButton" onClick={handleAddButtonClick}><b>Add</b></button>
+       
       {showPopup && (
         <PopUpTodo
           onClose={togglePopup}

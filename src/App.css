@@ -1,55 +1,143 @@
-.App {
-  text-align: center;
+
+h3{
+  display: inline;
+  position: absolute;
+  font-size: large;
+  padding-left: 2%;
+  top: 13%;
+
+}
+body{
+  background-color: white;
+}
+.MainContainer{
+  width: 90%;
+  height: 10%;
+  top:5%;
+  margin-top: 20px;
+  left: 60px;
+  border: solid black 2px;
+  border-radius: 5px;
+  position: absolute;
+  display: inline;
+
+}
+li{
+  margin: 5px;
+  display: inline;
+  color: gray;
+  margin-right: 5%;
+  font-size: large;
+  position: absolute;
+  top:25%;
+
+}
+li:hover{
+  color: black;
+  font-size: large;
+  font-weight: 300;
+}
+h3:hover{color: black;
+font-size: large;
+font-weight: 300;}
+
+.content{
+height: 30%;
+width: 40%;
+display: inline-block;
+border: solid white 2px;
+border-radius: 5px;
+border-width: 5px;
+
+color: white;
+margin-top:20%;
+text-align: center;
+margin-right: 2%;
+
+}
+p{
+padding: 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-/* src/App.css */
-
-.App {
-  text-align: center;
-}
-/* Add this to App.css */
-#map-container {
-  height: 100vh;
-  width: 100%;
-}
-
-.App-header {
-  background-color: #282c34;
+.MainContainer {
   padding: 20px;
-  color: white;
-  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+form div {
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  padding: 5px;
+}
+
+form button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+main{
+  margin: 20%;
+}
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 10px;
+}
+
+.post-item a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.post-item a:hover {
+  text-decoration: underline;
+}
+
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.post-item {
+  margin-bottom: 10px;
+}
+
+.post-item a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.post-item a:hover {
+  text-decoration: underline;
 }

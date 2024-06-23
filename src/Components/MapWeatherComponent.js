@@ -32,15 +32,13 @@ const WeatherComponent = ({ lat, lon }) => {
       <h2>Weather Information</h2>
       <div className='weather-info'>
        
-        <p><span>Location:</span> </p>
+        <h3><span>Location:</span> </h3>
         <center>
-       <div className='WordInfo'>
-        <p>Latitude {lat},</p><p> Longitude {lon}</p>
-        </div>
+        <p>Latitude {lat}, Longitude {lon}</p>
         </center>
-
-        <p className='WordInfo3'><span>Temperature:</span></p>
-        <div className='WordInfo2'> <p>{temperature} °C</p></div>
+        <br></br>
+        <p><span>Temperature:</span></p>
+        <p>{temperature} °C</p>
        
       </div>
     </div>

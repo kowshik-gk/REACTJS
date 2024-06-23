@@ -9,7 +9,7 @@ import './Style/MapStyle.css';
 import WeatherComponent from './MapWeatherComponent';
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-
+ 
 // Fixing leaflet's default icon issue with Webpack
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: (require('leaflet/dist/images/marker-icon-2x.png')).default,

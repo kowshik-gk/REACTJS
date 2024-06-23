@@ -6,7 +6,7 @@ class Welcome extends Component {
     constructor() {
         super()
         this.state = {
-            message: "Hi Soldiers"
+            message: "Hi"
         }
     }
     changeContent() {
